@@ -1,0 +1,12 @@
+FROM node:24-bookworm-slim
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends bash curl git \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace
+ENV NEXT_TELEMETRY_DISABLED=1
+COPY package*.json ./
+RUN npm ci
+COPY app app
+COPY next.config.mjs .
+EXPOSE 3000
+CMD ["npm", "run", "dev"]

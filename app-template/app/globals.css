@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #252531; background: #fafafa; font: 16px/1.6 system-ui, sans-serif; }
+main { max-width: 720px; margin: 80px auto; padding: 24px; }
+h1 { font-size: 30px; line-height: 1.3; }
+p { color: #72727f; }

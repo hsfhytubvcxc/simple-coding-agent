@@ -1,0 +1,50 @@
+.chat-panel { display: flex; flex-direction: column; min-width: 0; min-height: 0; border-right: 1px solid var(--border); background: white; }
+.messages { flex: 1; min-height: 0; padding: 26px 26px 16px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #e0e2eb transparent; }
+.chat-empty { padding-top: min(13vh, 110px); padding-bottom: 30px; }
+.empty-icon { width: 46px; height: 46px; display: grid; place-items: center; background: #f1eefa; color: #7c6bd4; border: 1px solid #ebe5fa; border-radius: 13px; margin-bottom: 22px; }
+.chat-empty h1 { font-size: 25px; line-height: 1.3; letter-spacing: -.8px; font-weight: 600; margin: 0 0 14px; }
+.chat-empty p { color: #9097a6; font-size: 12px; line-height: 1.8; margin: 0; }
+.suggestions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 27px; }
+.suggestions button { background: #fff; color: #7b8091; border: 1px solid #e7e7ef; border-radius: 7px; padding: 7px 10px; font-size: 10px; }
+.suggestions button:hover { color: var(--accent); border-color: #cfc6f4; background: #faf8ff; }
+.message { display: flex; gap: 11px; margin-bottom: 23px; min-width: 0; }
+.message-avatar { width: 29px; height: 29px; display: grid; place-items: center; flex-shrink: 0; color: #8b7dce; background: #f2effb; border: 1px solid #eae5f8; border-radius: 9px; }
+.message.user .message-avatar { background: #f1f3f7; border-color: #e8ebf1; color: #8d97a9; }
+.message-body { min-width: 0; flex: 1; }
+.message-author { color: #646c7e; font-size: 10px; font-weight: 600; margin: 0 0 5px; }
+.markdown { font-size: 13px; color: #4d5565; overflow-wrap: anywhere; }
+.markdown > :first-child { margin-top: 0; }
+.markdown > :last-child { margin-bottom: 0; }
+.markdown p { margin: 0 0 10px; }
+.markdown pre { overflow-x: auto; padding: 12px; background: #f6f7fa; border-radius: 6px; font-size: 11px; }
+.markdown code { font-family: ui-monospace, monospace; font-size: .9em; }
+.markdown :not(pre) > code { background: #f3f1f8; color: #7561ae; padding: 2px 4px; border-radius: 4px; }
+.markdown a { color: var(--accent); }
+.markdown ul, .markdown ol { padding-left: 20px; }
+.tool-card { margin: -7px 0 16px 40px; border: 1px solid #e7e9f0; border-radius: 8px; background: #fcfcfe; overflow: hidden; }
+.tool-card summary { display: flex; align-items: center; gap: 8px; padding: 10px 11px; color: #83899b; font: 11px ui-monospace, monospace; cursor: pointer; list-style: none; }
+.tool-card summary::-webkit-details-marker { display: none; }
+.tool-status { display: flex; align-items: center; gap: 5px; margin-left: auto; color: #8d97a6; font: 10px system-ui, sans-serif; }
+.tool-card.completed .tool-status { color: #63a48a; }
+.tool-card.failed .tool-status { color: #bf7567; }
+.tool-card.running .tool-status { color: #9b87cf; }
+.tool-chevron { margin-left: 4px; transition: transform .15s; }
+.tool-card[open] .tool-chevron { transform: rotate(180deg); }
+.tool-body { border-top: 1px solid #ebeaf1; }
+.tool-command, .tool-output { margin: 0; padding: 11px; white-space: pre-wrap; overflow-wrap: anywhere; font: 10px/1.7 ui-monospace, monospace; }
+.tool-command { color: #76718d; background: #f7f6fb; }
+.tool-output { max-height: 240px; overflow: auto; color: #9095a3; }
+.agent-working { display: flex; align-items: center; gap: 8px; margin: 16px 0 10px 40px; color: #9c96b0; font-size: 11px; }
+.typing-cursor { display: inline-block; height: 13px; width: 2px; background: var(--accent); animation: blink 1s steps(2) infinite; }
+.error-banner { display: flex; gap: 9px; margin: 0 20px 10px; padding: 11px 13px; border: 1px solid #f1d9d4; border-radius: 8px; background: #fff6f4; color: #b26a5b; font-size: 12px; overflow-wrap: anywhere; }
+.error-banner svg { flex-shrink: 0; margin-top: 2px; }
+.composer { padding: 13px 20px 15px; }
+.composer-input { position: relative; border: 1px solid #dfe0ea; border-radius: 12px; background: #fcfcfe; box-shadow: 0 2px 5px #1a183003; }
+.composer-input:focus-within { border-color: #b7a9ed; box-shadow: 0 0 0 3px #efebfb; }
+.composer textarea { display: block; width: 100%; min-height: 94px; max-height: 220px; resize: vertical; padding: 13px 52px 13px 14px; border: 0; outline: none; background: transparent; color: #474d5d; font-size: 12px; line-height: 1.6; }
+.composer textarea::placeholder { color: #abb0bd; }
+.composer textarea:focus-visible { outline: none; }
+.send-button { position: absolute; right: 10px; bottom: 10px; width: 30px; height: 30px; display: grid; place-items: center; border: 0; border-radius: 8px; background: var(--accent); color: white; }
+.send-button:hover { background: #5542c5; }
+.composer-hint { display: flex; justify-content: space-between; margin-top: 8px; padding: 0 3px; color: #b4b7c2; font-size: 9px; }
+@keyframes blink { 50% { opacity: 0; } }

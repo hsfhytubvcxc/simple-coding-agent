@@ -1,0 +1,23 @@
+{
+  "name": "coding-agent-ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "react-markdown": "10.1.0",
+    "lucide-react": "1.61.0"
+  },
+  "devDependencies": {
+    "vite": "7.3.7",
+    "@vitejs/plugin-react": "5.2.0",
+    "@types/react": "19.1.17",
+    "@types/react-dom": "19.1.11",
+    "typescript": "5.9.3"
+  }
+}
